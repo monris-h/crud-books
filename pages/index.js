@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 
 export default function Home() {
   const [books, setBooks] = useState([]);
-
-  // Obtener la lista de libros desde el API
+  //hola
+  //Obtener la lista de libros desde el API
   useEffect(() => {
     fetch("/api/books")
       .then((res) => res.json())
