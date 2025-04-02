@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 export default function BookForm({ onSubmit }) {
   const [title, setTitle] = useState("");
@@ -13,21 +15,23 @@ export default function BookForm({ onSubmit }) {
         setAuthor("");
       }}
     >
-      <input
+      <Input
         type="text"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         placeholder="Título"
         required
       />
-      <input
+      <br></br>
+      <Input
         type="text"
         value={author}
         onChange={(e) => setAuthor(e.target.value)}
         placeholder="Autor"
         required
       />
-      <button type="submit">Agregar Libro</button>
+      <br></br>
+      <Button type="submit">Agregar Libro</Button>
     </form>
   );
 }
